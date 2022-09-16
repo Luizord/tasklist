@@ -1,0 +1,47 @@
+input {
+    background-color: #fafafa;
+    border: 0;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    transition: .3s box-shadow;
+    font-size: 2rem;
+    padding: 5px 10px;
+}
+
+input:hover {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+input:focus {
+    border: 1px solid cornflowerblue;
+    box-shadow: 0 0 3px 1px rgb(100 149 237);
+    outline: none;
+}
+
+button {
+    font-size: 2rem;
+    padding: 10px 11px;
+    background: #e0e0e0;
+    line-height: 1.2;
+    border: 2px solid #e0e0e0;
+    box-shadow: 0 0 4px rgb(0 0 0 / 30%);
+}
+
+button:hover {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    background-color: #c9c9c9;
+}
+
+button:active {
+    background-color: #ebebeb;
+}
+
+button:focus {
+    outline: none;
+}
+
+.add-task {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    margin-top: 15px;
+}

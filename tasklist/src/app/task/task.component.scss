@@ -1,0 +1,76 @@
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: white;
+    margin: 0;
+
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+
+    display: grid;
+    place-content: center;
+
+    margin-right: 15px;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    background-color: lightgreen;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+input[type="checkbox"]:focus {
+    outline: max(2px, 0.15em) solid lightgray;
+    outline-offset: max(2px, 0.15em);
+}
+
+.task-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    align-items: baseline;
+}
+
+.task {
+    display: flex;
+    font-family: system-ui, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.1;
+    align-items: baseline;
+}
+
+.done {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.deleted {
+    color: lightgrey;
+}
+
+span {
+    color: salmon;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-left: 20px;
+    font-family: system-ui, sans-serif;
+    font-weight: bold;
+}
+
+span:hover {
+    color: red;
+}

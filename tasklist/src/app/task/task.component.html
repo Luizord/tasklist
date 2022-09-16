@@ -1,0 +1,7 @@
+<div class="task-container">
+    <label class="task" [ngClass]="{'done': task.status === 1, 'deleted': task.status === 2}">
+        <input *ngIf="task.status !==2" type="checkbox" [(ngModel)]="checkboxValue" [value]="checkboxValue" (change)="changeTaskState()" />
+        {{task.name}}
+    </label>
+    <span *ngIf="task.status !==2" (click)="deleteTask()">x</span>
+</div>
